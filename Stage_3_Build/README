@@ -1,0 +1,11 @@
+To compile the program, we have provided a makefile for ease of use. Simply use the following commands:
+'make'
+'./trivia'
+
+NOTE: For this project to be buildable, we made use of the libraries 'libcurl' and 'jsoncpp'. To install these, run the following commands:
+'sudo apt-get install libcurl-openssl-dev'
+'sudo apt-get install libjsoncpp-dev'
+
+This game depends on an API for its questions and thus requires Internet access to play. The API Call will timeout after 10 seconds and the program will close if attempting to play without connection.
+
+Additionally, since questions are retrieved from an API, they are encoded and thus, unicode characters such as '&', '"', '<', etc. will display as '&amp;', '&quot;', etc. The questions should still be readable, but we aim to fix this for the final submission of this project.
