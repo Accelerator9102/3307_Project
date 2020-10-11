@@ -1,0 +1,118 @@
+\hypertarget{classInputManager}{}\doxysection{Input\+Manager Class Reference}
+\label{classInputManager}\index{InputManager@{InputManager}}
+
+
+This is the header file for the \mbox{\hyperlink{classInputManager}{Input\+Manager}} class. This file is the frame work for the manager of many \mbox{\hyperlink{classInput}{Input}} instances.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInputManager_af518290877dd183606709d5852db5491}{$\sim$\+Input\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInputManager_ad6af10800114387d8a1e85a75a51120a}{update\+All}} ()
+\begin{DoxyCompactList}\small\item\em Method to process input for all input devices. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInputManager_a0b27aa87e6469ce637ea6575e5c4bc07}{add\+Player}} (std\+::vector$<$ int $>$ pins, const \mbox{\hyperlink{classPlayer}{Player}} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Method to create a new player input configuration. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classInputManager}{Input\+Manager}} \& \mbox{\hyperlink{classInputManager_a4e1058b89c07e2f3ec1097b843c19fc8}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve an instance of \mbox{\hyperlink{classInputManager}{Input\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInputManager_a8be46886da639b26d67181c29dab6d6c}{Input\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInputManager_aa8e4b1dadccebf4d55f215faffad3af3}\label{classInputManager_aa8e4b1dadccebf4d55f215faffad3af3}} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classInput}{Input}} $>$ $>$ {\bfseries inputs}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the header file for the \mbox{\hyperlink{classInputManager}{Input\+Manager}} class. This file is the frame work for the manager of many \mbox{\hyperlink{classInput}{Input}} instances. 
+
+\begin{DoxyAuthor}{Author}
+Alexandra Drazilov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInputManager_af518290877dd183606709d5852db5491}\label{classInputManager_af518290877dd183606709d5852db5491}} 
+\index{InputManager@{InputManager}!````~InputManager@{$\sim$InputManager}}
+\index{````~InputManager@{$\sim$InputManager}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$InputManager()}{~InputManager()}}
+{\footnotesize\ttfamily Input\+Manager\+::$\sim$\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+Destructor. \mbox{\Hypertarget{classInputManager_a8be46886da639b26d67181c29dab6d6c}\label{classInputManager_a8be46886da639b26d67181c29dab6d6c}} 
+\index{InputManager@{InputManager}!InputManager@{InputManager}}
+\index{InputManager@{InputManager}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{InputManager()}{InputManager()}}
+{\footnotesize\ttfamily Input\+Manager\+::\+Input\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor method. 
+
+Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInputManager_a0b27aa87e6469ce637ea6575e5c4bc07}\label{classInputManager_a0b27aa87e6469ce637ea6575e5c4bc07}} 
+\index{InputManager@{InputManager}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily void Input\+Manager\+::add\+Player (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{pins,  }\item[{const \mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Method to create a new player input configuration. 
+
+This method pairs a new player to specified I/O devices and stores this configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pins} & The I/O pins used for the player. \\
+\hline
+{\em player} & the player object to be associated with the specified input devices. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInputManager_a4e1058b89c07e2f3ec1097b843c19fc8}\label{classInputManager_a4e1058b89c07e2f3ec1097b843c19fc8}} 
+\index{InputManager@{InputManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInputManager}{Input\+Manager}} \& Input\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to retrieve an instance of \mbox{\hyperlink{classInputManager}{Input\+Manager}}. 
+
+\begin{DoxyReturn}{Returns}
+A static reference to the \mbox{\hyperlink{classInputManager}{Input\+Manager}} instance.
+\end{DoxyReturn}
+This method returns an instance of the \mbox{\hyperlink{classInputManager}{Input\+Manager}} object. If an instance doesn\textquotesingle{}t already exist, it creates one. \mbox{\Hypertarget{classInputManager_ad6af10800114387d8a1e85a75a51120a}\label{classInputManager_ad6af10800114387d8a1e85a75a51120a}} 
+\index{InputManager@{InputManager}!updateAll@{updateAll}}
+\index{updateAll@{updateAll}!InputManager@{InputManager}}
+\doxysubsubsection{\texorpdfstring{updateAll()}{updateAll()}}
+{\footnotesize\ttfamily void Input\+Manager\+::update\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to process input for all input devices. 
+
+This method runs through every input object and updates a player\textquotesingle{}s answer if one of the I/O devices is receiving input. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Input\+Manager.\+h\item 
+Input\+Manager.\+cpp\end{DoxyCompactItemize}

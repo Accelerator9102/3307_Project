@@ -1,0 +1,126 @@
+\hypertarget{classQuestion}{}\doxysection{Question Class Reference}
+\label{classQuestion}\index{Question@{Question}}
+
+
+Stores all needed attributes relating to a single question. This class is intended to store the necessary attributes for a question, such as the question itself, the possible options, and the index of the correct answer.  
+
+
+
+
+{\ttfamily \#include $<$Question.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQuestion_a076494e221eb2320441b9c95fab81caa}{Question}} (std\+::string token=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classQuestion_a8d9283fb5357e39ed58a743f18629040}{$\sim$\+Question}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classQuestion_a76b18831e496c6820f3965386139128f}{get\+Question}} () const
+\begin{DoxyCompactList}\small\item\em Method used to obtain the question string. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classQuestion_a6db47ad78fa13d089b71d4ba16be0fbb}{get\+Options}} () const
+\begin{DoxyCompactList}\small\item\em Method used to obtain the possible answers to the question. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classQuestion_a8416a657b95d3a6faa6ebce2b1a2f2a9}{get\+Answer}} () const
+\begin{DoxyCompactList}\small\item\em Method used to obtain the correct answer to the question. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuestion_a4a44061ac7f51d324a6c2adb7cfbf410}\label{classQuestion_a4a44061ac7f51d324a6c2adb7cfbf410}} 
+std\+::string {\bfseries question}
+\item 
+\mbox{\Hypertarget{classQuestion_af85363e7315b2a8b2d613ad69a955361}\label{classQuestion_af85363e7315b2a8b2d613ad69a955361}} 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classQuestion_af85363e7315b2a8b2d613ad69a955361}{options}}
+\begin{DoxyCompactList}\small\item\em String to contain the actual question. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQuestion_a044c79130fa70b37b0f714cc45b8c62e}\label{classQuestion_a044c79130fa70b37b0f714cc45b8c62e}} 
+int \mbox{\hyperlink{classQuestion_a044c79130fa70b37b0f714cc45b8c62e}{correct\+Answer}}
+\begin{DoxyCompactList}\small\item\em Vector containing all possible options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stores all needed attributes relating to a single question. This class is intended to store the necessary attributes for a question, such as the question itself, the possible options, and the index of the correct answer. 
+
+\begin{DoxyAuthor}{Author}
+Mhd Taisir Sahlol 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classQuestion_a076494e221eb2320441b9c95fab81caa}\label{classQuestion_a076494e221eb2320441b9c95fab81caa}} 
+\index{Question@{Question}!Question@{Question}}
+\index{Question@{Question}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{Question()}{Question()}}
+{\footnotesize\ttfamily Question\+::\+Question (\begin{DoxyParamCaption}\item[{std\+::string}]{token = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The token used for A\+PI calls to ensure no duplicates are received. Defaults to blank.\\
+\hline
+\end{DoxyParams}
+This constructor generates all of the data for a single question by using an A\+PI helper. It then computes a random offset and inserts the correct answer and the incorrect answers into the options vector. Lastly, it stores the index of the correct answer. \mbox{\Hypertarget{classQuestion_a8d9283fb5357e39ed58a743f18629040}\label{classQuestion_a8d9283fb5357e39ed58a743f18629040}} 
+\index{Question@{Question}!````~Question@{$\sim$Question}}
+\index{````~Question@{$\sim$Question}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{$\sim$Question()}{~Question()}}
+{\footnotesize\ttfamily Question\+::$\sim$\+Question (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+Destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuestion_a8416a657b95d3a6faa6ebce2b1a2f2a9}\label{classQuestion_a8416a657b95d3a6faa6ebce2b1a2f2a9}} 
+\index{Question@{Question}!getAnswer@{getAnswer}}
+\index{getAnswer@{getAnswer}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{getAnswer()}{getAnswer()}}
+{\footnotesize\ttfamily const int Question\+::get\+Answer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method used to obtain the correct answer to the question. 
+
+This simply returns the int storing the index of the correct answer obtained from initialization.
+
+\begin{DoxyReturn}{Returns}
+An integer representing the index of the correct answer from the options vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuestion_a6db47ad78fa13d089b71d4ba16be0fbb}\label{classQuestion_a6db47ad78fa13d089b71d4ba16be0fbb}} 
+\index{Question@{Question}!getOptions@{getOptions}}
+\index{getOptions@{getOptions}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{getOptions()}{getOptions()}}
+{\footnotesize\ttfamily const vector$<$ string $>$ Question\+::get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method used to obtain the possible answers to the question. 
+
+This simply returns the vector storing the answers obtained from initialization.
+
+\begin{DoxyReturn}{Returns}
+A vector containing strings of all the possible answers. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classQuestion_a76b18831e496c6820f3965386139128f}\label{classQuestion_a76b18831e496c6820f3965386139128f}} 
+\index{Question@{Question}!getQuestion@{getQuestion}}
+\index{getQuestion@{getQuestion}!Question@{Question}}
+\doxysubsubsection{\texorpdfstring{getQuestion()}{getQuestion()}}
+{\footnotesize\ttfamily const string Question\+::get\+Question (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method used to obtain the question string. 
+
+This simply returns the string storing the question obtained from initialization.
+
+\begin{DoxyReturn}{Returns}
+A string containing the question obtained during construction. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Question.\+h\item 
+Question.\+cpp\end{DoxyCompactItemize}

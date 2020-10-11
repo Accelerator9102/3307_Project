@@ -1,0 +1,195 @@
+\hypertarget{classAPIHelper}{}\doxysection{A\+P\+I\+Helper Class Reference}
+\label{classAPIHelper}\index{APIHelper@{APIHelper}}
+
+
+Helper class used to make A\+PI Calls whenever they are needed. This class serves to perform all communication between the program and the Open\+T\+DB A\+PI. It has functions allowing it to retrieve questions, tokens, and reset tokens.  
+
+
+
+
+{\ttfamily \#include $<$A\+P\+I\+Helper.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAPIHelper_a7403d728e81e4573a8bac7eb402165c0}{$\sim$\+A\+P\+I\+Helper}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+Json\+::\+Value \mbox{\hyperlink{classAPIHelper_abe2e54974f9eb3c4c92daa51b87c22da}{get\+Question}} (std\+::string token)
+\begin{DoxyCompactList}\small\item\em Method to retrieve a question from the A\+PI. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAPIHelper_a1234d2ac7adf56c8f99d3dc906a7acc0}{get\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve a token from the A\+PI. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAPIHelper_a8f91a57ea292230302b9011a5397e627}{reset\+Token}} (std\+::string token)
+\begin{DoxyCompactList}\small\item\em Method to reset a token so that seen questions may be received again. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} \& \mbox{\hyperlink{classAPIHelper_ad5fc1a0e04a830de56360620ef928ec2}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve an instance of \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAPIHelper_a2c26b561411a60f649af9d98635ab67c}{A\+P\+I\+Helper}} ()
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAPIHelper_a49399c9cb89037d9f5602882502eaccd}\label{classAPIHelper_a49399c9cb89037d9f5602882502eaccd}} 
+{\bfseries A\+P\+I\+Helper} (const \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} \&other)
+\item 
+\mbox{\Hypertarget{classAPIHelper_a07007ff471039076b1331041b1e3fd21}\label{classAPIHelper_a07007ff471039076b1331041b1e3fd21}} 
+\mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} \& {\bfseries operator=} (const \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} \&other)
+\item 
+Json\+::\+Value \mbox{\hyperlink{classAPIHelper_a97c32abd54c6ab76b1cb73516e36f8cb}{api\+Call}} (std\+::string url)
+\begin{DoxyCompactList}\small\item\em Method used to directly make calls to the A\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classAPIHelper_ab6a5bab499678d0abfca36d0f84d6c43}{callback}} (void $\ast$contents, size\+\_\+t size, size\+\_\+t nmemb, void $\ast$userp)
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAPIHelper_a64804228bd75b0afefaf20fd5329b28b}\label{classAPIHelper_a64804228bd75b0afefaf20fd5329b28b}} 
+static \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} $\ast$ {\bfseries instance} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class used to make A\+PI Calls whenever they are needed. This class serves to perform all communication between the program and the Open\+T\+DB A\+PI. It has functions allowing it to retrieve questions, tokens, and reset tokens. 
+
+\begin{DoxyAuthor}{Author}
+Mhd Taisir Sahlol 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAPIHelper_a7403d728e81e4573a8bac7eb402165c0}\label{classAPIHelper_a7403d728e81e4573a8bac7eb402165c0}} 
+\index{APIHelper@{APIHelper}!````~APIHelper@{$\sim$APIHelper}}
+\index{````~APIHelper@{$\sim$APIHelper}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{$\sim$APIHelper()}{~APIHelper()}}
+{\footnotesize\ttfamily A\+P\+I\+Helper\+::$\sim$\+A\+P\+I\+Helper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+Destructor. \mbox{\Hypertarget{classAPIHelper_a2c26b561411a60f649af9d98635ab67c}\label{classAPIHelper_a2c26b561411a60f649af9d98635ab67c}} 
+\index{APIHelper@{APIHelper}!APIHelper@{APIHelper}}
+\index{APIHelper@{APIHelper}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{APIHelper()}{APIHelper()}}
+{\footnotesize\ttfamily A\+P\+I\+Helper\+::\+A\+P\+I\+Helper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor method. 
+
+Constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAPIHelper_a97c32abd54c6ab76b1cb73516e36f8cb}\label{classAPIHelper_a97c32abd54c6ab76b1cb73516e36f8cb}} 
+\index{APIHelper@{APIHelper}!apiCall@{apiCall}}
+\index{apiCall@{apiCall}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{apiCall()}{apiCall()}}
+{\footnotesize\ttfamily Json\+::\+Value A\+P\+I\+Helper\+::api\+Call (\begin{DoxyParamCaption}\item[{std\+::string}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Method used to directly make calls to the A\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & The U\+RL to pass into C\+U\+RL for retrieval. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Json object retrieved from parsing through the buffer string or -\/1 if it failed.
+\end{DoxyReturn}
+This is the function to make a call to the A\+PI. It does so by using C\+U\+RL. If successful, it will return the Json object generated by parsing through the U\+RL. If it can\textquotesingle{}t create a Json value, it returns -\/1. If C\+U\+RL failed for whatever reason, the program will automatically exit and display the reasoning. \mbox{\Hypertarget{classAPIHelper_ab6a5bab499678d0abfca36d0f84d6c43}\label{classAPIHelper_ab6a5bab499678d0abfca36d0f84d6c43}} 
+\index{APIHelper@{APIHelper}!callback@{callback}}
+\index{callback@{callback}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily size\+\_\+t A\+P\+I\+Helper\+::callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{contents,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{nmemb,  }\item[{void $\ast$}]{userp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+An instance of \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}}. 
+
+Method used to put the results from C\+U\+RL into a string buffer. 
+\begin{DoxyParams}{Parameters}
+{\em contents} & A pointer to the contents of the U\+RL. \\
+\hline
+{\em size} & Size. \\
+\hline
+{\em nmemb} & Number of members. \\
+\hline
+{\em userp} & A pointer to the string buffer to store data into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The real size of the file.
+\end{DoxyReturn}
+This is the standard callback method provided from example code in the documentation for C\+U\+RL. It copies the contents from a url into a string buffer, and then returns the real size of the url\textquotesingle{}s contents. \mbox{\Hypertarget{classAPIHelper_ad5fc1a0e04a830de56360620ef928ec2}\label{classAPIHelper_ad5fc1a0e04a830de56360620ef928ec2}} 
+\index{APIHelper@{APIHelper}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} \& A\+P\+I\+Helper\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to retrieve an instance of \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}}. 
+
+\begin{DoxyReturn}{Returns}
+A static reference to the \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} instance.
+\end{DoxyReturn}
+This method returns an instance of the \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} object. If an instance doesn\textquotesingle{}t already exist, it creates one. \mbox{\Hypertarget{classAPIHelper_abe2e54974f9eb3c4c92daa51b87c22da}\label{classAPIHelper_abe2e54974f9eb3c4c92daa51b87c22da}} 
+\index{APIHelper@{APIHelper}!getQuestion@{getQuestion}}
+\index{getQuestion@{getQuestion}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{getQuestion()}{getQuestion()}}
+{\footnotesize\ttfamily Json\+::\+Value A\+P\+I\+Helper\+::get\+Question (\begin{DoxyParamCaption}\item[{std\+::string}]{token }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve a question from the A\+PI. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The token used to ensure duplicate questions are not received. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A random question from the A\+PI in Json format.
+\end{DoxyReturn}
+This method sets the url for the A\+PI call to be the link to Open\+T\+DB\textquotesingle{}s question retrieval service with the token appended to it. If successful, it will return the Json object containing all information about the question. Otherwise, it returns -\/1 to indicate something went wrong. \mbox{\Hypertarget{classAPIHelper_a1234d2ac7adf56c8f99d3dc906a7acc0}\label{classAPIHelper_a1234d2ac7adf56c8f99d3dc906a7acc0}} 
+\index{APIHelper@{APIHelper}!getToken@{getToken}}
+\index{getToken@{getToken}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{getToken()}{getToken()}}
+{\footnotesize\ttfamily string A\+P\+I\+Helper\+::get\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve a token from the A\+PI. 
+
+\begin{DoxyReturn}{Returns}
+A string representing the generated token from the A\+PI.
+\end{DoxyReturn}
+This method sets the url for the A\+PI call to be the link to Open\+T\+DB\textquotesingle{}s token retrieval service with the token appended to it. If successful, it will return the string containing the token. Otherwise, it will return an empty string to indicate something went wrong. \mbox{\Hypertarget{classAPIHelper_a8f91a57ea292230302b9011a5397e627}\label{classAPIHelper_a8f91a57ea292230302b9011a5397e627}} 
+\index{APIHelper@{APIHelper}!resetToken@{resetToken}}
+\index{resetToken@{resetToken}!APIHelper@{APIHelper}}
+\doxysubsubsection{\texorpdfstring{resetToken()}{resetToken()}}
+{\footnotesize\ttfamily int A\+P\+I\+Helper\+::reset\+Token (\begin{DoxyParamCaption}\item[{std\+::string}]{token }\end{DoxyParamCaption})}
+
+
+
+Method to reset a token so that seen questions may be received again. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em token} & The token to be reset. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The code from the A\+PI representing success or failure.
+\end{DoxyReturn}
+This method sets the url for the A\+PI call to be the link to Open\+T\+DB\textquotesingle{}s token resetting service with the token appended to it. It will return whatever response code the A\+PI generates. 0 indicates a success, and anything else indicates a failure. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+A\+P\+I\+Helper.\+h\item 
+A\+P\+I\+Helper.\+cpp\end{DoxyCompactItemize}

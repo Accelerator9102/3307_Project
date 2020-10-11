@@ -1,0 +1,180 @@
+\hypertarget{classTimeManager}{}\doxysection{Time\+Manager Class Reference}
+\label{classTimeManager}\index{TimeManager@{TimeManager}}
+
+
+Creates and maintains timer objects. This class is the interface by which other classes can obtain timers.  
+
+
+
+
+{\ttfamily \#include $<$Time\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classTimeManager_a579b1b9e3d323dcc030c100992f7ed8a}{$\sim$\+Time\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classTimeManager_a2af2b9b6834b716bc9a3a57f0f7a1014}{add\+Timer}} (double stop\+\_\+time=0, bool start\+\_\+now=false)
+\begin{DoxyCompactList}\small\item\em Method to generate a new timer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTimer}{Timer}} \& \mbox{\hyperlink{classTimeManager_a4c827fc82685f33d02b81ed23b5ca0f5}{get\+Timer}} (const int key)
+\begin{DoxyCompactList}\small\item\em Method to retrieves a particular timer given a key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimeManager_a115f8947014dbdac897f5a0414c7d624}{remove\+Timer}} (const int key)
+\begin{DoxyCompactList}\small\item\em Method to remove a timer from the stored list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimeManager_a97d902b19861efc099141eeb846671a3}{update}} ()
+\begin{DoxyCompactList}\small\item\em Method to update all timer objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classTimeManager}{Time\+Manager}} \& \mbox{\hyperlink{classTimeManager_aa294eafa495fa1e6c1b5ec1634a9df65}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve an instance of \mbox{\hyperlink{classTimeManager}{Time\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTimeManager_ab1c3cbb48ad68d928bb8b9a4ef210ed6}{Time\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTimeManager_a20717daec1151a027f077c96403233d2}\label{classTimeManager_a20717daec1151a027f077c96403233d2}} 
+{\bfseries Time\+Manager} (const \mbox{\hyperlink{classTimeManager}{Time\+Manager}} \&other)
+\item 
+\mbox{\Hypertarget{classTimeManager_a85994c773534208f49d348e50a7c9774}\label{classTimeManager_a85994c773534208f49d348e50a7c9774}} 
+\mbox{\hyperlink{classTimeManager}{Time\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTimeManager}{Time\+Manager}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTimeManager_ab25146dbc080eddebc5aa32a7511eb81}\label{classTimeManager_ab25146dbc080eddebc5aa32a7511eb81}} 
+std\+::map$<$ int, \mbox{\hyperlink{classTimer}{Timer}} $>$ \mbox{\hyperlink{classTimeManager_ab25146dbc080eddebc5aa32a7511eb81}{timers}}
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{classTimeManager}{Time\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimeManager_ad33f930c9845a3f4459a4944012facc2}\label{classTimeManager_ad33f930c9845a3f4459a4944012facc2}} 
+int \mbox{\hyperlink{classTimeManager_ad33f930c9845a3f4459a4944012facc2}{key\+\_\+count}}
+\begin{DoxyCompactList}\small\item\em A map to store \mbox{\hyperlink{classTimer}{Timer}} objects and their I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTimeManager_a0085609c4a42728fbcbde7658c3842ef}\label{classTimeManager_a0085609c4a42728fbcbde7658c3842ef}} 
+static \mbox{\hyperlink{classTimeManager}{Time\+Manager}} $\ast$ {\bfseries instance} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates and maintains timer objects. This class is the interface by which other classes can obtain timers. 
+
+\begin{DoxyAuthor}{Author}
+Daniel Carranza 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTimeManager_a579b1b9e3d323dcc030c100992f7ed8a}\label{classTimeManager_a579b1b9e3d323dcc030c100992f7ed8a}} 
+\index{TimeManager@{TimeManager}!````~TimeManager@{$\sim$TimeManager}}
+\index{````~TimeManager@{$\sim$TimeManager}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$TimeManager()}{~TimeManager()}}
+{\footnotesize\ttfamily Time\+Manager\+::$\sim$\+Time\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor method. 
+
+Destructor. \mbox{\Hypertarget{classTimeManager_ab1c3cbb48ad68d928bb8b9a4ef210ed6}\label{classTimeManager_ab1c3cbb48ad68d928bb8b9a4ef210ed6}} 
+\index{TimeManager@{TimeManager}!TimeManager@{TimeManager}}
+\index{TimeManager@{TimeManager}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{TimeManager()}{TimeManager()}}
+{\footnotesize\ttfamily Time\+Manager\+::\+Time\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Default constructor. 
+
+Constructor method. Initializes key count to 0. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimeManager_a2af2b9b6834b716bc9a3a57f0f7a1014}\label{classTimeManager_a2af2b9b6834b716bc9a3a57f0f7a1014}} 
+\index{TimeManager@{TimeManager}!addTimer@{addTimer}}
+\index{addTimer@{addTimer}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{addTimer()}{addTimer()}}
+{\footnotesize\ttfamily const int Time\+Manager\+::add\+Timer (\begin{DoxyParamCaption}\item[{double}]{stop\+\_\+time = {\ttfamily 0},  }\item[{bool}]{start\+\_\+now = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Method to generate a new timer. 
+
+This method creates a new timer object and increments the number of keys.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop\+\_\+time} & The length of time the timer should run for. Defaults to 0. \\
+\hline
+{\em start\+\_\+now} & Whether or not the timer should begin counting after construction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the timer it just added. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimeManager_aa294eafa495fa1e6c1b5ec1634a9df65}\label{classTimeManager_aa294eafa495fa1e6c1b5ec1634a9df65}} 
+\index{TimeManager@{TimeManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTimeManager}{Time\+Manager}} \& Time\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to retrieve an instance of \mbox{\hyperlink{classTimeManager}{Time\+Manager}}. 
+
+\begin{DoxyReturn}{Returns}
+A static reference to the \mbox{\hyperlink{classTimeManager}{Time\+Manager}} instance.
+\end{DoxyReturn}
+This method returns an instance of the \mbox{\hyperlink{classTimeManager}{Time\+Manager}} object. If an instance doesn\textquotesingle{}t already exist, it creates one. \mbox{\Hypertarget{classTimeManager_a4c827fc82685f33d02b81ed23b5ca0f5}\label{classTimeManager_a4c827fc82685f33d02b81ed23b5ca0f5}} 
+\index{TimeManager@{TimeManager}!getTimer@{getTimer}}
+\index{getTimer@{getTimer}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{getTimer()}{getTimer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTimer}{Timer}} \& Time\+Manager\+::get\+Timer (\begin{DoxyParamCaption}\item[{const int}]{key }\end{DoxyParamCaption})}
+
+
+
+Method to retrieves a particular timer given a key. 
+
+This method returns a specific timer given a key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key used to search for a timer object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the timer object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimeManager_a115f8947014dbdac897f5a0414c7d624}\label{classTimeManager_a115f8947014dbdac897f5a0414c7d624}} 
+\index{TimeManager@{TimeManager}!removeTimer@{removeTimer}}
+\index{removeTimer@{removeTimer}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{removeTimer()}{removeTimer()}}
+{\footnotesize\ttfamily void Time\+Manager\+::remove\+Timer (\begin{DoxyParamCaption}\item[{const int}]{key }\end{DoxyParamCaption})}
+
+
+
+Method to remove a timer from the stored list. 
+
+This method removes a timer from the stored map given a key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key used to search for a timer object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTimeManager_a97d902b19861efc099141eeb846671a3}\label{classTimeManager_a97d902b19861efc099141eeb846671a3}} 
+\index{TimeManager@{TimeManager}!update@{update}}
+\index{update@{update}!TimeManager@{TimeManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Time\+Manager\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to update all timer objects. 
+
+This method updates every timer currently stored in the map. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Time\+Manager.\+h\item 
+Time\+Manager.\+cpp\end{DoxyCompactItemize}

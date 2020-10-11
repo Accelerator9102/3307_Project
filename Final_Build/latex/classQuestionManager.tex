@@ -1,0 +1,124 @@
+\hypertarget{classQuestionManager}{}\doxysection{Question\+Manager Class Reference}
+\label{classQuestionManager}\index{QuestionManager@{QuestionManager}}
+
+
+Retrieves questions and keeps track of questions already asked. This class is meant to be the interface by which other classes can retrieve objects of type \mbox{\hyperlink{classQuestion}{Question}}. It also keeps track of a token which can be used to determine which questions have already been provided.  
+
+
+
+
+{\ttfamily \#include $<$Question\+Manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQuestionManager_a9b03305a3b18c14de2995c94f8e27592}{$\sim$\+Question\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classQuestion}{Question}} \mbox{\hyperlink{classQuestionManager_aa24973a6af59d1b3e4589b9a9cd7fd34}{get\+Question}} () const
+\begin{DoxyCompactList}\small\item\em Method to retrieve a single question. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classQuestionManager_afa253b3fd1bbc34a9ce80446bb3a3b05}{reset\+Questions}} ()
+\begin{DoxyCompactList}\small\item\em Method to reset the A\+PI token. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} \& \mbox{\hyperlink{classQuestionManager_aa80b7bff861f7e38f8a17b6e5eb1d72b}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve an instance of \mbox{\hyperlink{classQuestionManager}{Question\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classQuestionManager_a1ee79716772b9e8e47301ffb2a6f0675}{Question\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classQuestionManager_a77dcae667ed17d7c6f60caf423db0fd3}\label{classQuestionManager_a77dcae667ed17d7c6f60caf423db0fd3}} 
+{\bfseries Question\+Manager} (const \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} \&other)
+\item 
+\mbox{\Hypertarget{classQuestionManager_ac8452be31b30dd508df50f0ca797f819}\label{classQuestionManager_ac8452be31b30dd508df50f0ca797f819}} 
+\mbox{\hyperlink{classQuestionManager}{Question\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuestionManager_a9be8ca514f494e2946af8758f31c917d}\label{classQuestionManager_a9be8ca514f494e2946af8758f31c917d}} 
+std\+::string \mbox{\hyperlink{classQuestionManager_a9be8ca514f494e2946af8758f31c917d}{token}}
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{classQuestionManager}{Question\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQuestionManager_ad73d1e1bd37fe47989110e9cc52da1b0}\label{classQuestionManager_ad73d1e1bd37fe47989110e9cc52da1b0}} 
+static \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} $\ast$ {\bfseries instance} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Retrieves questions and keeps track of questions already asked. This class is meant to be the interface by which other classes can retrieve objects of type \mbox{\hyperlink{classQuestion}{Question}}. It also keeps track of a token which can be used to determine which questions have already been provided. 
+
+\begin{DoxyAuthor}{Author}
+Mhd Taisir Sahlol 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classQuestionManager_a9b03305a3b18c14de2995c94f8e27592}\label{classQuestionManager_a9b03305a3b18c14de2995c94f8e27592}} 
+\index{QuestionManager@{QuestionManager}!````~QuestionManager@{$\sim$QuestionManager}}
+\index{````~QuestionManager@{$\sim$QuestionManager}!QuestionManager@{QuestionManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$QuestionManager()}{~QuestionManager()}}
+{\footnotesize\ttfamily Question\+Manager\+::$\sim$\+Question\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+Destructor. \mbox{\Hypertarget{classQuestionManager_a1ee79716772b9e8e47301ffb2a6f0675}\label{classQuestionManager_a1ee79716772b9e8e47301ffb2a6f0675}} 
+\index{QuestionManager@{QuestionManager}!QuestionManager@{QuestionManager}}
+\index{QuestionManager@{QuestionManager}!QuestionManager@{QuestionManager}}
+\doxysubsubsection{\texorpdfstring{QuestionManager()}{QuestionManager()}}
+{\footnotesize\ttfamily Question\+Manager\+::\+Question\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor method. 
+
+This method constructs a \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} object. To do so, the token needs to be initialized so an \mbox{\hyperlink{classAPIHelper}{A\+P\+I\+Helper}} object must be created first. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classQuestionManager_aa80b7bff861f7e38f8a17b6e5eb1d72b}\label{classQuestionManager_aa80b7bff861f7e38f8a17b6e5eb1d72b}} 
+\index{QuestionManager@{QuestionManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!QuestionManager@{QuestionManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} \& Question\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to retrieve an instance of \mbox{\hyperlink{classQuestionManager}{Question\+Manager}}. 
+
+\begin{DoxyReturn}{Returns}
+A static reference to the \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} instance.
+\end{DoxyReturn}
+This method returns an instance of the \mbox{\hyperlink{classQuestionManager}{Question\+Manager}} object. If an instance doesn\textquotesingle{}t already exist, it creates one. \mbox{\Hypertarget{classQuestionManager_aa24973a6af59d1b3e4589b9a9cd7fd34}\label{classQuestionManager_aa24973a6af59d1b3e4589b9a9cd7fd34}} 
+\index{QuestionManager@{QuestionManager}!getQuestion@{getQuestion}}
+\index{getQuestion@{getQuestion}!QuestionManager@{QuestionManager}}
+\doxysubsubsection{\texorpdfstring{getQuestion()}{getQuestion()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classQuestion}{Question}} Question\+Manager\+::get\+Question (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to retrieve a single question. 
+
+\begin{DoxyReturn}{Returns}
+An object of type \mbox{\hyperlink{classQuestion}{Question}} containing all relevant information.
+\end{DoxyReturn}
+This method attempts retrieves an object of type \mbox{\hyperlink{classQuestion}{Question}} by passing the token along to prevent duplicates. If this is successful the \mbox{\hyperlink{classQuestion}{Question}} object is returned and otherwise we throw an exception. \mbox{\Hypertarget{classQuestionManager_afa253b3fd1bbc34a9ce80446bb3a3b05}\label{classQuestionManager_afa253b3fd1bbc34a9ce80446bb3a3b05}} 
+\index{QuestionManager@{QuestionManager}!resetQuestions@{resetQuestions}}
+\index{resetQuestions@{resetQuestions}!QuestionManager@{QuestionManager}}
+\doxysubsubsection{\texorpdfstring{resetQuestions()}{resetQuestions()}}
+{\footnotesize\ttfamily void Question\+Manager\+::reset\+Questions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to reset the A\+PI token. 
+
+This method resets the token on the A\+PI so that previously received questions can be obtained again. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Question\+Manager.\+h\item 
+Question\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,206 @@
+\hypertarget{classTimer}{}\doxysection{Timer Class Reference}
+\label{classTimer}\index{Timer@{Timer}}
+
+
+Class to store attributes of timers and update them as needed. This class is responsible for initializing and keeping all needed values needed to keep track of time. It also has the necessary functions to update the timer as well as starting, stopping, and resetting it.  
+
+
+
+
+{\ttfamily \#include $<$Timer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTimer_aa26b807838a117a3854099ac088a2b03}{Timer}} (double stop\+\_\+time=0, bool start\+\_\+now=false)
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classTimer_ac9b4d0ff713a923a64559a0a1f379550}{get\+Current\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Method to retrieve the current time of the timer. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classTimer_a5254af83d7af0d20e068ec0fa43fc9cc}{is\+Timer\+Done}} () const
+\begin{DoxyCompactList}\small\item\em Method to determine if the timer has finished. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classTimer_a13a1740797b8b56292ed5bb0c96ac68f}{get\+Stop\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Method to get the set time limit for the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimer_a7cf3dad891b98862aa7236059184785b}{set\+Stop\+Time}} (const double \&stop\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Method to set a new time limit for the timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimer_aa8c887576ec3b0d68c10ebf4097c367c}{start\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Method to tell the timer to count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimer_a27f97da1b1d19ad74a847703ca25c455}{stop\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Method to tell the timer to pause. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimer_ac417566ec5d640216e8e63831df9a3ec}{restart\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Method to reset the timer to before it began counting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTimer_a745ad59b5a46744cd871a1129a25d74f}{update}} ()
+\begin{DoxyCompactList}\small\item\em Method to update the time counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTimer_a14fa469c4c295c5fa6e66a4ad1092146}{$\sim$\+Timer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTimer_a90dbf07f78c2ea4e4833286a1bc916b0}\label{classTimer_a90dbf07f78c2ea4e4833286a1bc916b0}} 
+double {\bfseries stop\+\_\+time}
+\item 
+\mbox{\Hypertarget{classTimer_a111eaa692b89a12e4866b57b1831f51e}\label{classTimer_a111eaa692b89a12e4866b57b1831f51e}} 
+bool \mbox{\hyperlink{classTimer_a111eaa692b89a12e4866b57b1831f51e}{is\+\_\+paused}}
+\begin{DoxyCompactList}\small\item\em The time limit for the timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimer_ad79a5ebd6e6dd6324ce9f61ce6248613}\label{classTimer_ad79a5ebd6e6dd6324ce9f61ce6248613}} 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classTimer_ad79a5ebd6e6dd6324ce9f61ce6248613}{start\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em A boolean representing if the timer has been stopped or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimer_a4323851fdea9639b3729849e4cee7b2f}\label{classTimer_a4323851fdea9639b3729849e4cee7b2f}} 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classTimer_a4323851fdea9639b3729849e4cee7b2f}{last\+\_\+pause\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em The moment in time that the clock started. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimer_a3d635904e26d40bc4148271e3f147ae7}\label{classTimer_a3d635904e26d40bc4148271e3f147ae7}} 
+std\+::chrono\+::seconds \mbox{\hyperlink{classTimer_a3d635904e26d40bc4148271e3f147ae7}{current\+\_\+time}}
+\begin{DoxyCompactList}\small\item\em The moment in time that clock was last in a stopped state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTimer_a917863968853a83d1fc0db21c67f60c4}\label{classTimer_a917863968853a83d1fc0db21c67f60c4}} 
+std\+::chrono\+::seconds \mbox{\hyperlink{classTimer_a917863968853a83d1fc0db21c67f60c4}{pause\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em The time in seconds that the timer has been running for. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to store attributes of timers and update them as needed. This class is responsible for initializing and keeping all needed values needed to keep track of time. It also has the necessary functions to update the timer as well as starting, stopping, and resetting it. 
+
+\begin{DoxyAuthor}{Author}
+Daniel Carranza 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTimer_aa26b807838a117a3854099ac088a2b03}\label{classTimer_aa26b807838a117a3854099ac088a2b03}} 
+\index{Timer@{Timer}!Timer@{Timer}}
+\index{Timer@{Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{Timer()}{Timer()}}
+{\footnotesize\ttfamily Timer\+::\+Timer (\begin{DoxyParamCaption}\item[{double}]{stop\+\_\+time = {\ttfamily 0},  }\item[{bool}]{start\+\_\+now = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor method. 
+
+This constructor initializes all the necessary variables for the timer object.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop\+\_\+time} & How long until the timer is done. Defaults to 0. \\
+\hline
+{\em start\+\_\+now} & Determines if the timer should start counting on construction. Defaults to false. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTimer_a14fa469c4c295c5fa6e66a4ad1092146}\label{classTimer_a14fa469c4c295c5fa6e66a4ad1092146}} 
+\index{Timer@{Timer}!````~Timer@{$\sim$Timer}}
+\index{````~Timer@{$\sim$Timer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Timer()}{~Timer()}}
+{\footnotesize\ttfamily Timer\+::$\sim$\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+Destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTimer_ac9b4d0ff713a923a64559a0a1f379550}\label{classTimer_ac9b4d0ff713a923a64559a0a1f379550}} 
+\index{Timer@{Timer}!getCurrentTime@{getCurrentTime}}
+\index{getCurrentTime@{getCurrentTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{getCurrentTime()}{getCurrentTime()}}
+{\footnotesize\ttfamily const double Timer\+::get\+Current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to retrieve the current time of the timer. 
+
+This method retrieves the current running time of the timer.
+
+\begin{DoxyReturn}{Returns}
+A double representing the current time. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimer_a13a1740797b8b56292ed5bb0c96ac68f}\label{classTimer_a13a1740797b8b56292ed5bb0c96ac68f}} 
+\index{Timer@{Timer}!getStopTime@{getStopTime}}
+\index{getStopTime@{getStopTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{getStopTime()}{getStopTime()}}
+{\footnotesize\ttfamily const double Timer\+::get\+Stop\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to get the set time limit for the timer. 
+
+This method retrieves the set stopping time.
+
+\begin{DoxyReturn}{Returns}
+A double representing the set time limit for the timer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimer_a5254af83d7af0d20e068ec0fa43fc9cc}\label{classTimer_a5254af83d7af0d20e068ec0fa43fc9cc}} 
+\index{Timer@{Timer}!isTimerDone@{isTimerDone}}
+\index{isTimerDone@{isTimerDone}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{isTimerDone()}{isTimerDone()}}
+{\footnotesize\ttfamily const bool Timer\+::is\+Timer\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to determine if the timer has finished. 
+
+This method determines if the timer has exceeded its stopping time or not.
+
+\begin{DoxyReturn}{Returns}
+True if the timer is done, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTimer_ac417566ec5d640216e8e63831df9a3ec}\label{classTimer_ac417566ec5d640216e8e63831df9a3ec}} 
+\index{Timer@{Timer}!restartTimer@{restartTimer}}
+\index{restartTimer@{restartTimer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{restartTimer()}{restartTimer()}}
+{\footnotesize\ttfamily void Timer\+::restart\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to reset the timer to before it began counting. 
+
+This method makes all the necessary adjustments to the variables to make the timer behave as if it had just been constructed. \mbox{\Hypertarget{classTimer_a7cf3dad891b98862aa7236059184785b}\label{classTimer_a7cf3dad891b98862aa7236059184785b}} 
+\index{Timer@{Timer}!setStopTime@{setStopTime}}
+\index{setStopTime@{setStopTime}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{setStopTime()}{setStopTime()}}
+{\footnotesize\ttfamily void Timer\+::set\+Stop\+Time (\begin{DoxyParamCaption}\item[{const double \&}]{stop\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+Method to set a new time limit for the timer. 
+
+This method sets the current stopping time to a new one.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stop\+\_\+time} & The length of time that the timer should go for. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTimer_aa8c887576ec3b0d68c10ebf4097c367c}\label{classTimer_aa8c887576ec3b0d68c10ebf4097c367c}} 
+\index{Timer@{Timer}!startTimer@{startTimer}}
+\index{startTimer@{startTimer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{startTimer()}{startTimer()}}
+{\footnotesize\ttfamily void Timer\+::start\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to tell the timer to count. 
+
+This method forces the timer to update and also takes it out of a paused state. \mbox{\Hypertarget{classTimer_a27f97da1b1d19ad74a847703ca25c455}\label{classTimer_a27f97da1b1d19ad74a847703ca25c455}} 
+\index{Timer@{Timer}!stopTimer@{stopTimer}}
+\index{stopTimer@{stopTimer}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{stopTimer()}{stopTimer()}}
+{\footnotesize\ttfamily void Timer\+::stop\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to tell the timer to pause. 
+
+This method puts the timer in a paused state. \mbox{\Hypertarget{classTimer_a745ad59b5a46744cd871a1129a25d74f}\label{classTimer_a745ad59b5a46744cd871a1129a25d74f}} 
+\index{Timer@{Timer}!update@{update}}
+\index{update@{update}!Timer@{Timer}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Timer\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to update the time counter. 
+
+This method updates the variables storing the current running time of the timer, as well as the current paused timed if the timer happens to be paused. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Timer.\+h\item 
+Timer.\+cpp\end{DoxyCompactItemize}

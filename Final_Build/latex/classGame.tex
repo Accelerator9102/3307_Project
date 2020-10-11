@@ -1,0 +1,375 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+Class containing the general game loop. This class is responsible for running the trivia game and connecting all the pieces together.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const int \mbox{\hyperlink{classGame_a1ccfce56acd42e97a3a8ec26d2a02a89}{get\+Round\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Method to retrieve the current round number. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classPlayer}{Player}} \& \mbox{\hyperlink{classGame_a87cb9f1c2fcf30f8169d56a9b965713e}{get\+Player}} (const unsigned int player\+ID) const
+\begin{DoxyCompactList}\small\item\em Method to retrieve a player given its ID. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classGame_ae19af2fb8a92c7464596bb394ada7e3d}{is\+Game\+Done}} () const
+\begin{DoxyCompactList}\small\item\em Method to determine if the game has concluded. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classPlayer}{Player}} \& \mbox{\hyperlink{classGame_a977245b617f9a9756dc46c3d82daea06}{get\+Current\+Winner}} () const
+\begin{DoxyCompactList}\small\item\em Method to determine the current leading player. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{classGame_a59990f31c6b9c058b1501721b9e52b7a}{add\+Player}} (const std\+::map$<$ unsigned int, unsigned int $>$ \&answer\+I\+Ds)
+\begin{DoxyCompactList}\small\item\em Method to add a new player to the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ae36f4ce839a1dcc8d8cfa58871cdac58}{start\+Next\+Round}} ()
+\begin{DoxyCompactList}\small\item\em Method to begin a new round. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classGame_a7413cf96f1ad002a818208c08e42808e}{is\+Round\+Live}} () const
+\begin{DoxyCompactList}\small\item\em Method to determine if a round is currently ongoing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a0ed4071254b21c8a17c4faaa0c3c15f5}{restart}} (const int round\+No=0)
+\begin{DoxyCompactList}\small\item\em Method to restart the game from a specified point. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classRound}{Round}} $\ast$ \mbox{\hyperlink{classGame_a039bb497572176e57889d9ebda74cd42}{get\+Current\+Round}} () const
+\begin{DoxyCompactList}\small\item\em Method to retrieve the current round. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a0397fb3cdabe0ba464336eba70ff793a}{set\+Game\+Length}} (const unsigned int rounds)
+\begin{DoxyCompactList}\small\item\em Method to set game length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a9fd2aae4e168023f7b72610046354d6b}{set\+Round\+Time}} (const double \mbox{\hyperlink{classGame_a8741a7b6ed8abe488ab62cb9e81da487}{round\+\_\+length}})
+\begin{DoxyCompactList}\small\item\em Method to set the timelength of each round. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ab3c7344aa1d2399e0f111130e22dcfd5}{set\+Point\+Value}} (const unsigned int \mbox{\hyperlink{classGame_a7bdb3dc46ffd8d4eac4be752d10c895e}{point\+\_\+value}})
+\begin{DoxyCompactList}\small\item\em Method to set the points gained per correct answer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a0560dac8d99842f526eb13ce5999cb4b}{set\+Time\+Bonus}} (const unsigned int \mbox{\hyperlink{classGame_a201790d040b3280744b641daba2a07ed}{time\+\_\+bonus}})
+\begin{DoxyCompactList}\small\item\em Method to set the bonus for answering quickly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a79df6376b332d63c9eca0dcee30305c3}{update}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classGame}{Game}} loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classGame}{Game}} \& \mbox{\hyperlink{classGame_a115e2c272c91e4ecbd6115d1eda70f38}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve an instance of \mbox{\hyperlink{classGame}{Game}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a465ef3d9c00b2d03cc86573b2c01e8c3}\label{classGame_a465ef3d9c00b2d03cc86573b2c01e8c3}} 
+{\bfseries Game} (const \mbox{\hyperlink{classGame}{Game}} \&other)
+\item 
+\mbox{\Hypertarget{classGame_a769a9a4a7b9ff70238fe9b9dd85c93e9}\label{classGame_a769a9a4a7b9ff70238fe9b9dd85c93e9}} 
+const \mbox{\hyperlink{classGame}{Game}} \& {\bfseries operator=} (const \mbox{\hyperlink{classGame}{Game}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_afbf31c5867bccf2539884a16b0ddfe6f}\label{classGame_afbf31c5867bccf2539884a16b0ddfe6f}} 
+unsigned int \mbox{\hyperlink{classGame_afbf31c5867bccf2539884a16b0ddfe6f}{total\+\_\+rounds}}
+\begin{DoxyCompactList}\small\item\em An instance of \mbox{\hyperlink{classQuestionManager}{Question\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a8741a7b6ed8abe488ab62cb9e81da487}\label{classGame_a8741a7b6ed8abe488ab62cb9e81da487}} 
+double \mbox{\hyperlink{classGame_a8741a7b6ed8abe488ab62cb9e81da487}{round\+\_\+length}}
+\begin{DoxyCompactList}\small\item\em The total numebr of rounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a7bdb3dc46ffd8d4eac4be752d10c895e}\label{classGame_a7bdb3dc46ffd8d4eac4be752d10c895e}} 
+unsigned int \mbox{\hyperlink{classGame_a7bdb3dc46ffd8d4eac4be752d10c895e}{point\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em The time per round. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a201790d040b3280744b641daba2a07ed}\label{classGame_a201790d040b3280744b641daba2a07ed}} 
+unsigned int \mbox{\hyperlink{classGame_a201790d040b3280744b641daba2a07ed}{time\+\_\+bonus}}
+\begin{DoxyCompactList}\small\item\em Number of points for correct answers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_aac9e4c1b25b4a42e912edb34558fd273}\label{classGame_aac9e4c1b25b4a42e912edb34558fd273}} 
+unsigned int \mbox{\hyperlink{classGame_aac9e4c1b25b4a42e912edb34558fd273}{round\+\_\+number}}
+\begin{DoxyCompactList}\small\item\em The multiplier for answering quickly. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a729b33226ef1c1a0ae19a7aae134c69b}\label{classGame_a729b33226ef1c1a0ae19a7aae134c69b}} 
+double \mbox{\hyperlink{classGame_a729b33226ef1c1a0ae19a7aae134c69b}{time\+\_\+between\+\_\+rounds}}
+\begin{DoxyCompactList}\small\item\em The current round number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ab75aa209b91b62adf74e9e8a86b6843a}\label{classGame_ab75aa209b91b62adf74e9e8a86b6843a}} 
+unsigned int \mbox{\hyperlink{classGame_ab75aa209b91b62adf74e9e8a86b6843a}{between\+\_\+rounds\+\_\+timer}}
+\begin{DoxyCompactList}\small\item\em The time between different rounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_aee681b7bae1721d3437c533d51a53498}\label{classGame_aee681b7bae1721d3437c533d51a53498}} 
+int \mbox{\hyperlink{classGame_aee681b7bae1721d3437c533d51a53498}{player\+\_\+number}}
+\begin{DoxyCompactList}\small\item\em The ID of the timer for between rounds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a23aa29505ad8cac8790478208b4bb253}\label{classGame_a23aa29505ad8cac8790478208b4bb253}} 
+\mbox{\hyperlink{classRound}{Round}} \mbox{\hyperlink{classGame_a23aa29505ad8cac8790478208b4bb253}{current\+\_\+round}}
+\begin{DoxyCompactList}\small\item\em Number of players. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a7a383b13a08d4e72ea1e215cb1e8235b}\label{classGame_a7a383b13a08d4e72ea1e215cb1e8235b}} 
+std\+::map$<$ unsigned int, \mbox{\hyperlink{classPlayer}{Player}} $>$ \mbox{\hyperlink{classGame_a7a383b13a08d4e72ea1e215cb1e8235b}{players}}
+\begin{DoxyCompactList}\small\item\em The current round. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a36da868b18e106205c256598a67574de}\label{classGame_a36da868b18e106205c256598a67574de}} 
+std\+::vector$<$ unsigned int $>$ \mbox{\hyperlink{classGame_a36da868b18e106205c256598a67574de}{player\+\_\+\+I\+Ds}}
+\begin{DoxyCompactList}\small\item\em A map of players and their I\+Ds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_aa469cdc0a30f4fd2d6d99b23f4fbf257}\label{classGame_aa469cdc0a30f4fd2d6d99b23f4fbf257}} 
+static \mbox{\hyperlink{classGame}{Game}} $\ast$ {\bfseries instance} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing the general game loop. This class is responsible for running the trivia game and connecting all the pieces together. 
+
+\begin{DoxyAuthor}{Author}
+Daniel Carranza 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530}} 
+\index{Game@{Game}!````~Game@{$\sim$Game}}
+\index{````~Game@{$\sim$Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{$\sim$Game()}{~Game()}}
+{\footnotesize\ttfamily Game\+::$\sim$\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor method. 
+
+Destructor. \mbox{\Hypertarget{classGame_ad59df6562a58a614fda24622d3715b65}\label{classGame_ad59df6562a58a614fda24622d3715b65}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor. 
+
+This constructor method initializes values. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_a59990f31c6b9c058b1501721b9e52b7a}\label{classGame_a59990f31c6b9c058b1501721b9e52b7a}} 
+\index{Game@{Game}!addPlayer@{addPlayer}}
+\index{addPlayer@{addPlayer}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{addPlayer()}{addPlayer()}}
+{\footnotesize\ttfamily const unsigned int Game\+::add\+Player (\begin{DoxyParamCaption}\item[{const std\+::map$<$ unsigned int, unsigned int $>$ \&}]{answer\+I\+Ds }\end{DoxyParamCaption})}
+
+
+
+Method to add a new player to the game. 
+
+This method adds a new player to the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em answer\+I\+Ds} & A map containing the I/O pins for each input and their corresponding answer buttons. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The ID of the new player. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a039bb497572176e57889d9ebda74cd42}\label{classGame_a039bb497572176e57889d9ebda74cd42}} 
+\index{Game@{Game}!getCurrentRound@{getCurrentRound}}
+\index{getCurrentRound@{getCurrentRound}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getCurrentRound()}{getCurrentRound()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classRound}{Round}} $\ast$ Game\+::get\+Current\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to retrieve the current round. 
+
+This method retrieves a pointer to the current round object.
+
+\begin{DoxyReturn}{Returns}
+A pointer to the current \mbox{\hyperlink{classRound}{Round}} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a977245b617f9a9756dc46c3d82daea06}\label{classGame_a977245b617f9a9756dc46c3d82daea06}} 
+\index{Game@{Game}!getCurrentWinner@{getCurrentWinner}}
+\index{getCurrentWinner@{getCurrentWinner}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getCurrentWinner()}{getCurrentWinner()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPlayer}{Player}} \& Game\+::get\+Current\+Winner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to determine the current leading player. 
+
+Retrieves the player that is currently in the lead.
+
+\begin{DoxyReturn}{Returns}
+A reference to the winning player. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a115e2c272c91e4ecbd6115d1eda70f38}\label{classGame_a115e2c272c91e4ecbd6115d1eda70f38}} 
+\index{Game@{Game}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGame}{Game}} \& Game\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Method to retrieve an instance of \mbox{\hyperlink{classGame}{Game}}. 
+
+\begin{DoxyReturn}{Returns}
+A static reference to the \mbox{\hyperlink{classGame}{Game}} instance.
+\end{DoxyReturn}
+This method returns an instance of the \mbox{\hyperlink{classTimeManager}{Time\+Manager}} object. If an instance doesn\textquotesingle{}t already exist, it creates one. \mbox{\Hypertarget{classGame_a87cb9f1c2fcf30f8169d56a9b965713e}\label{classGame_a87cb9f1c2fcf30f8169d56a9b965713e}} 
+\index{Game@{Game}!getPlayer@{getPlayer}}
+\index{getPlayer@{getPlayer}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getPlayer()}{getPlayer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPlayer}{Player}} \& Game\+::get\+Player (\begin{DoxyParamCaption}\item[{const unsigned int}]{player\+ID }\end{DoxyParamCaption}) const}
+
+
+
+Method to retrieve a player given its ID. 
+
+This method retrieves a player based on the given ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+ID} & The ID of the player to be found. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the player object the ID represents. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a1ccfce56acd42e97a3a8ec26d2a02a89}\label{classGame_a1ccfce56acd42e97a3a8ec26d2a02a89}} 
+\index{Game@{Game}!getRoundNumber@{getRoundNumber}}
+\index{getRoundNumber@{getRoundNumber}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getRoundNumber()}{getRoundNumber()}}
+{\footnotesize\ttfamily const int Game\+::get\+Round\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to retrieve the current round number. 
+
+This method retrieves the current round number.
+
+\begin{DoxyReturn}{Returns}
+The current round number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_ae19af2fb8a92c7464596bb394ada7e3d}\label{classGame_ae19af2fb8a92c7464596bb394ada7e3d}} 
+\index{Game@{Game}!isGameDone@{isGameDone}}
+\index{isGameDone@{isGameDone}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isGameDone()}{isGameDone()}}
+{\footnotesize\ttfamily const bool Game\+::is\+Game\+Done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to determine if the game has concluded. 
+
+This method determines if the game is done by checking if the round number has exceeded the maximum.
+
+\begin{DoxyReturn}{Returns}
+Whether or not the game is over. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a7413cf96f1ad002a818208c08e42808e}\label{classGame_a7413cf96f1ad002a818208c08e42808e}} 
+\index{Game@{Game}!isRoundLive@{isRoundLive}}
+\index{isRoundLive@{isRoundLive}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isRoundLive()}{isRoundLive()}}
+{\footnotesize\ttfamily const bool Game\+::is\+Round\+Live (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Method to determine if a round is currently ongoing. 
+
+This method determines if a round is currently ongoing.
+
+\begin{DoxyReturn}{Returns}
+Whether or not the round is ongoing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGame_a0ed4071254b21c8a17c4faaa0c3c15f5}\label{classGame_a0ed4071254b21c8a17c4faaa0c3c15f5}} 
+\index{Game@{Game}!restart@{restart}}
+\index{restart@{restart}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily void Game\+::restart (\begin{DoxyParamCaption}\item[{const int}]{round\+No = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Method to restart the game from a specified point. 
+
+This method restarts the game to the set round number, allowing it to continue for longer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em round\+No} & The round to reset the game to. Defaults to 0. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_a0397fb3cdabe0ba464336eba70ff793a}\label{classGame_a0397fb3cdabe0ba464336eba70ff793a}} 
+\index{Game@{Game}!setGameLength@{setGameLength}}
+\index{setGameLength@{setGameLength}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setGameLength()}{setGameLength()}}
+{\footnotesize\ttfamily void Game\+::set\+Game\+Length (\begin{DoxyParamCaption}\item[{const unsigned int}]{rounds }\end{DoxyParamCaption})}
+
+
+
+Method to set game length. 
+
+This method sets the game length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rounds} & The number of rounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_ab3c7344aa1d2399e0f111130e22dcfd5}\label{classGame_ab3c7344aa1d2399e0f111130e22dcfd5}} 
+\index{Game@{Game}!setPointValue@{setPointValue}}
+\index{setPointValue@{setPointValue}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setPointValue()}{setPointValue()}}
+{\footnotesize\ttfamily void Game\+::set\+Point\+Value (\begin{DoxyParamCaption}\item[{const unsigned int}]{point\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Method to set the points gained per correct answer. 
+
+This method sets the point value for correct answers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em point\+\_\+value} & The amount of points gained on a correct answer. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_a9fd2aae4e168023f7b72610046354d6b}\label{classGame_a9fd2aae4e168023f7b72610046354d6b}} 
+\index{Game@{Game}!setRoundTime@{setRoundTime}}
+\index{setRoundTime@{setRoundTime}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setRoundTime()}{setRoundTime()}}
+{\footnotesize\ttfamily void Game\+::set\+Round\+Time (\begin{DoxyParamCaption}\item[{const double}]{round\+\_\+length }\end{DoxyParamCaption})}
+
+
+
+Method to set the timelength of each round. 
+
+This method sets the round length.
+
+
+\begin{DoxyParams}{Parameters}
+{\em round\+\_\+length} & How long the rounds should be. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_a0560dac8d99842f526eb13ce5999cb4b}\label{classGame_a0560dac8d99842f526eb13ce5999cb4b}} 
+\index{Game@{Game}!setTimeBonus@{setTimeBonus}}
+\index{setTimeBonus@{setTimeBonus}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{setTimeBonus()}{setTimeBonus()}}
+{\footnotesize\ttfamily void Game\+::set\+Time\+Bonus (\begin{DoxyParamCaption}\item[{const unsigned int}]{time\+\_\+bonus }\end{DoxyParamCaption})}
+
+
+
+Method to set the bonus for answering quickly. 
+
+This method sets the bonus for answering quickly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em time\+\_\+bonus} & The multiplier used to increase score based on answer speed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classGame_ae36f4ce839a1dcc8d8cfa58871cdac58}\label{classGame_ae36f4ce839a1dcc8d8cfa58871cdac58}} 
+\index{Game@{Game}!startNextRound@{startNextRound}}
+\index{startNextRound@{startNextRound}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{startNextRound()}{startNextRound()}}
+{\footnotesize\ttfamily void Game\+::start\+Next\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to begin a new round. 
+
+This method starts a new round. \mbox{\Hypertarget{classGame_a79df6376b332d63c9eca0dcee30305c3}\label{classGame_a79df6376b332d63c9eca0dcee30305c3}} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classGame}{Game}} loop. 
+
+This method contains the general game loop that handles everything. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+h\item 
+Game.\+cpp\end{DoxyCompactItemize}

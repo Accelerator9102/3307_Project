@@ -1,0 +1,230 @@
+\hypertarget{classRound}{}\doxysection{Round Class Reference}
+\label{classRound}\index{Round@{Round}}
+
+
+Contains all behaviour specific to each round of trivia This class stores the round timer and evaluates scores.  
+
+
+
+
+{\ttfamily \#include $<$Round.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRound_a0f70575715420dfcc12ad3f3385d64e0}{Round}} (const double round\+\_\+length=30, const unsigned int \mbox{\hyperlink{classRound_a949d5d811788904783fd83c7da1319fd}{point\+\_\+value}}=100, const unsigned int \mbox{\hyperlink{classRound_a44fbbf9183f11585d3e555ad0cdc8ff5}{time\+\_\+bonus}}=100)
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classRound_ad38543c9b691aaf49f8c862099ecf28b}{$\sim$\+Round}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classRound_aa078b0288aa2426f396709540be89650}{get\+Question}} () const
+\begin{DoxyCompactList}\small\item\em Returns the question of this round as a string. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classRound_ae737cc87a4be462b52c71930b43c373a}{get\+Answers}} () const
+\begin{DoxyCompactList}\small\item\em Returns the list of possible answers this round as a vector of strings. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classRound_ac39e796c000e4ace2dbdab218ea50c44}{get\+Correct\+Answer}} () const
+\begin{DoxyCompactList}\small\item\em Returns the correct answers of this roud as a string. \end{DoxyCompactList}\item 
+const unsigned int \mbox{\hyperlink{classRound_a40949b07ba2366840e9cbfd9e5a11328}{get\+Correct\+Answer\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the index of the correct answer to this round. \end{DoxyCompactList}\item 
+const double \mbox{\hyperlink{classRound_a1463d1ba12b9aaf434ffa6de9ac940ce}{get\+Current\+Round\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Returns how much time (in seconds) is remaining this round. \end{DoxyCompactList}\item 
+const bool \mbox{\hyperlink{classRound_aa2dab6948daefeba17e94df33b2824bc}{is\+Time\+Up}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the round has exceeded the time limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRound_a8328d7c8915f0c3befa515ed5319fa39}{submit\+Answer}} (unsigned int player\+ID, unsigned int answer) const
+\begin{DoxyCompactList}\small\item\em Adds an answer for evaluation at the end of the round. \end{DoxyCompactList}\item 
+const std\+::map$<$ unsigned int, unsigned int $>$ \mbox{\hyperlink{classRound_a50fcc3927668e8f94f39f9d35c888b7d}{evaluate\+Scores}} () const
+\begin{DoxyCompactList}\small\item\em Evaluates the scoring of submitted answers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRound_a315165511690aab7e63ef20318084953}\label{classRound_a315165511690aab7e63ef20318084953}} 
+double {\bfseries round\+\_\+length}
+\item 
+\mbox{\Hypertarget{classRound_a949d5d811788904783fd83c7da1319fd}\label{classRound_a949d5d811788904783fd83c7da1319fd}} 
+unsigned int \mbox{\hyperlink{classRound_a949d5d811788904783fd83c7da1319fd}{point\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em Duration of the round in seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRound_a44fbbf9183f11585d3e555ad0cdc8ff5}\label{classRound_a44fbbf9183f11585d3e555ad0cdc8ff5}} 
+unsigned int \mbox{\hyperlink{classRound_a44fbbf9183f11585d3e555ad0cdc8ff5}{time\+\_\+bonus}}
+\begin{DoxyCompactList}\small\item\em Points awarded for guessing correctly this round. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRound_ae0e687e005237b6620fd35b439399b00}\label{classRound_ae0e687e005237b6620fd35b439399b00}} 
+\mbox{\hyperlink{classQuestion}{Question}} \mbox{\hyperlink{classRound_ae0e687e005237b6620fd35b439399b00}{question}}
+\begin{DoxyCompactList}\small\item\em Bonus points for answering early this round. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRound_a136754b8ec455e8cb61f823e8bf5e9e5}\label{classRound_a136754b8ec455e8cb61f823e8bf5e9e5}} 
+int \mbox{\hyperlink{classRound_a136754b8ec455e8cb61f823e8bf5e9e5}{timer}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classQuestion}{Question}} data for this round. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRound_a741f96b091fc4f25de507896d1862eef}\label{classRound_a741f96b091fc4f25de507896d1862eef}} 
+std\+::map$<$ unsigned int, std\+::pair$<$ unsigned int, double $>$ $>$ \mbox{\hyperlink{classRound_a741f96b091fc4f25de507896d1862eef}{submitted\+\_\+answers}}
+\begin{DoxyCompactList}\small\item\em ID of \mbox{\hyperlink{classTimer}{Timer}} used to track the time of this round. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all behaviour specific to each round of trivia This class stores the round timer and evaluates scores. 
+
+\begin{DoxyAuthor}{Author}
+Daniel Carranza 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRound_a0f70575715420dfcc12ad3f3385d64e0}\label{classRound_a0f70575715420dfcc12ad3f3385d64e0}} 
+\index{Round@{Round}!Round@{Round}}
+\index{Round@{Round}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{Round()}{Round()}}
+{\footnotesize\ttfamily Round\+::\+Round (\begin{DoxyParamCaption}\item[{const double}]{round\+\_\+length = {\ttfamily 30},  }\item[{const unsigned int}]{point\+\_\+value = {\ttfamily 100},  }\item[{const unsigned int}]{time\+\_\+bonus = {\ttfamily 100} }\end{DoxyParamCaption})}
+
+
+
+Constructor method. 
+
+Constructs a \mbox{\hyperlink{classRound}{Round}} oject with specified time and point data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em round\+\_\+length} & Duration (in seconds) of this round \\
+\hline
+{\em point\+\_\+value} & How many points a correct answer is worth \\
+\hline
+{\em time\+\_\+bonus} & Up to how many bonus points are awarded for answering earlier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRound_ad38543c9b691aaf49f8c862099ecf28b}\label{classRound_ad38543c9b691aaf49f8c862099ecf28b}} 
+\index{Round@{Round}!````~Round@{$\sim$Round}}
+\index{````~Round@{$\sim$Round}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{$\sim$Round()}{~Round()}}
+{\footnotesize\ttfamily Round\+::$\sim$\+Round (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+Desctructs a \mbox{\hyperlink{classRound}{Round}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRound_a50fcc3927668e8f94f39f9d35c888b7d}\label{classRound_a50fcc3927668e8f94f39f9d35c888b7d}} 
+\index{Round@{Round}!evaluateScores@{evaluateScores}}
+\index{evaluateScores@{evaluateScores}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{evaluateScores()}{evaluateScores()}}
+{\footnotesize\ttfamily const std\+::map$<$ unsigned int, unsigned int $>$ Round\+::evaluate\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Evaluates the scoring of submitted answers. 
+
+Evaluates the points earned for answers submitted this round.
+
+\begin{DoxyReturn}{Returns}
+Map of scores where the key is the player I\+Ds, and the values are their respective points earned this round 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_ae737cc87a4be462b52c71930b43c373a}\label{classRound_ae737cc87a4be462b52c71930b43c373a}} 
+\index{Round@{Round}!getAnswers@{getAnswers}}
+\index{getAnswers@{getAnswers}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{getAnswers()}{getAnswers()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ Round\+::get\+Answers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the list of possible answers this round as a vector of strings. 
+
+Returns the vector of answers for this round.
+
+\begin{DoxyReturn}{Returns}
+Vector of answers as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_ac39e796c000e4ace2dbdab218ea50c44}\label{classRound_ac39e796c000e4ace2dbdab218ea50c44}} 
+\index{Round@{Round}!getCorrectAnswer@{getCorrectAnswer}}
+\index{getCorrectAnswer@{getCorrectAnswer}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{getCorrectAnswer()}{getCorrectAnswer()}}
+{\footnotesize\ttfamily const std\+::string Round\+::get\+Correct\+Answer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the correct answers of this roud as a string. 
+
+Returns the correct answer of this round.
+
+\begin{DoxyReturn}{Returns}
+String of correct answer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_a40949b07ba2366840e9cbfd9e5a11328}\label{classRound_a40949b07ba2366840e9cbfd9e5a11328}} 
+\index{Round@{Round}!getCorrectAnswerIndex@{getCorrectAnswerIndex}}
+\index{getCorrectAnswerIndex@{getCorrectAnswerIndex}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{getCorrectAnswerIndex()}{getCorrectAnswerIndex()}}
+{\footnotesize\ttfamily const unsigned int Round\+::get\+Correct\+Answer\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of the correct answer to this round. 
+
+Returns the index of the correct answer this round.
+
+\begin{DoxyReturn}{Returns}
+Index of correct answer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_a1463d1ba12b9aaf434ffa6de9ac940ce}\label{classRound_a1463d1ba12b9aaf434ffa6de9ac940ce}} 
+\index{Round@{Round}!getCurrentRoundTime@{getCurrentRoundTime}}
+\index{getCurrentRoundTime@{getCurrentRoundTime}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{getCurrentRoundTime()}{getCurrentRoundTime()}}
+{\footnotesize\ttfamily const double Round\+::get\+Current\+Round\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns how much time (in seconds) is remaining this round. 
+
+Returns the time remaining this round.
+
+\begin{DoxyReturn}{Returns}
+Time left this round 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_aa078b0288aa2426f396709540be89650}\label{classRound_aa078b0288aa2426f396709540be89650}} 
+\index{Round@{Round}!getQuestion@{getQuestion}}
+\index{getQuestion@{getQuestion}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{getQuestion()}{getQuestion()}}
+{\footnotesize\ttfamily const std\+::string Round\+::get\+Question (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the question of this round as a string. 
+
+Returns the question of this round.
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classRound}{Round}} question as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_aa2dab6948daefeba17e94df33b2824bc}\label{classRound_aa2dab6948daefeba17e94df33b2824bc}} 
+\index{Round@{Round}!isTimeUp@{isTimeUp}}
+\index{isTimeUp@{isTimeUp}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{isTimeUp()}{isTimeUp()}}
+{\footnotesize\ttfamily const bool Round\+::is\+Time\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the round has exceeded the time limit. 
+
+Returns true if the time for this round has passed.
+
+\begin{DoxyReturn}{Returns}
+True if the time is passed this round, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRound_a8328d7c8915f0c3befa515ed5319fa39}\label{classRound_a8328d7c8915f0c3befa515ed5319fa39}} 
+\index{Round@{Round}!submitAnswer@{submitAnswer}}
+\index{submitAnswer@{submitAnswer}!Round@{Round}}
+\doxysubsubsection{\texorpdfstring{submitAnswer()}{submitAnswer()}}
+{\footnotesize\ttfamily void Round\+::submit\+Answer (\begin{DoxyParamCaption}\item[{unsigned int}]{player\+ID,  }\item[{unsigned int}]{answer }\end{DoxyParamCaption}) const}
+
+
+
+Adds an answer for evaluation at the end of the round. 
+
+Adds an answer to the list of submitted answers.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player\+ID} & ID of the player submitting this answer \\
+\hline
+{\em answer} & Index of the answer submitted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Round.\+h\item 
+Round.\+cpp\end{DoxyCompactItemize}

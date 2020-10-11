@@ -1,0 +1,159 @@
+\hypertarget{classInput}{}\doxysection{Input Class Reference}
+\label{classInput}\index{Input@{Input}}
+
+
+\mbox{\hyperlink{classInput}{Input}} creates and manipulates the hardware for user input. This class stores all necessary values for any given \mbox{\hyperlink{classInput}{Input}} object and also contains ways to notify the associated player(s) if input is received.  
+
+
+
+
+{\ttfamily \#include $<$Input.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classInput_abae3f379d3f157cf42dc857309832dba}{Input}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInput_a116eed210953f9f772a4edc0b3e1cd85}{Input}} (int ID, int button\+Number, const \mbox{\hyperlink{classPlayer}{Player}} $\ast$\mbox{\hyperlink{classInput_a10f2b9a48b531cc2b594ed935583805f}{player}})
+\begin{DoxyCompactList}\small\item\em Constructor method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInput_af2db35ba67c8a8ccd23bef6a482fc291}{$\sim$\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Destructor method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInput_a02956c59fae64c7b95be019c0bb01fec}{update\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Method to tell the player object if input has been received. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInput_a9e3c4d6679fd21769710956bd86de9aa}{get\+State}} ()
+\begin{DoxyCompactList}\small\item\em Method to determine if the input object is on or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInput_a64afe40706be8b09168100a7aeee26e2}{get\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve the ID of the input object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInput_acfac5565a0b3fe639901244a48397f8f}{get\+Button\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Method to retrieve the number of the button\textquotesingle{}s answer that the input object represents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classInput_a6030cbda3a7f6863eb548af3707ab3ea}\label{classInput_a6030cbda3a7f6863eb548af3707ab3ea}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{classInput_a9086cae03fe1463cc7a99c24cdb36a3a}\label{classInput_a9086cae03fe1463cc7a99c24cdb36a3a}} 
+int \mbox{\hyperlink{classInput_a9086cae03fe1463cc7a99c24cdb36a3a}{number}}
+\begin{DoxyCompactList}\small\item\em The ID of the input object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInput_a790d2f49c81e77cb4301c5bc40eefdd3}\label{classInput_a790d2f49c81e77cb4301c5bc40eefdd3}} 
+bool \mbox{\hyperlink{classInput_a790d2f49c81e77cb4301c5bc40eefdd3}{state}}
+\begin{DoxyCompactList}\small\item\em The number of the answer button that the input object represents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classInput_a10f2b9a48b531cc2b594ed935583805f}\label{classInput_a10f2b9a48b531cc2b594ed935583805f}} 
+const \mbox{\hyperlink{classPlayer}{Player}} $\ast$ \mbox{\hyperlink{classInput_a10f2b9a48b531cc2b594ed935583805f}{player}}
+\begin{DoxyCompactList}\small\item\em Whether the input device is on or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classInput}{Input}} creates and manipulates the hardware for user input. This class stores all necessary values for any given \mbox{\hyperlink{classInput}{Input}} object and also contains ways to notify the associated player(s) if input is received. 
+
+\begin{DoxyAuthor}{Author}
+Alexandra Drazilov 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classInput_abae3f379d3f157cf42dc857309832dba}\label{classInput_abae3f379d3f157cf42dc857309832dba}} 
+\index{Input@{Input}!Input@{Input}}
+\index{Input@{Input}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Input\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor method. 
+
+This constructor allows for \mbox{\hyperlink{classInput}{Input}} type to be assigned to objects/arrays. \mbox{\Hypertarget{classInput_a116eed210953f9f772a4edc0b3e1cd85}\label{classInput_a116eed210953f9f772a4edc0b3e1cd85}} 
+\index{Input@{Input}!Input@{Input}}
+\index{Input@{Input}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{Input()}{Input()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Input\+::\+Input (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{int}]{button\+Number,  }\item[{const \mbox{\hyperlink{classPlayer}{Player}} $\ast$}]{player }\end{DoxyParamCaption})}
+
+
+
+Constructor method. 
+
+This constructor allows for \mbox{\hyperlink{classInput}{Input}} types on the pi to be created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the input object. \\
+\hline
+{\em button\+Number} & The number corresponding to a single button\textquotesingle{}s answer. \\
+\hline
+{\em player} & A pointer to the player object associated with the input object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classInput_af2db35ba67c8a8ccd23bef6a482fc291}\label{classInput_af2db35ba67c8a8ccd23bef6a482fc291}} 
+\index{Input@{Input}!````~Input@{$\sim$Input}}
+\index{````~Input@{$\sim$Input}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{$\sim$Input()}{~Input()}}
+{\footnotesize\ttfamily Input\+::$\sim$\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor method. 
+
+This deconstructor sets the pin to be -\/1 and the state false. To prevent any further use. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classInput_acfac5565a0b3fe639901244a48397f8f}\label{classInput_acfac5565a0b3fe639901244a48397f8f}} 
+\index{Input@{Input}!getButtonNumber@{getButtonNumber}}
+\index{getButtonNumber@{getButtonNumber}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getButtonNumber()}{getButtonNumber()}}
+{\footnotesize\ttfamily int Input\+::get\+Button\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve the number of the button\textquotesingle{}s answer that the input object represents. 
+
+This function returns the answer number that the button corresponds to.
+
+\begin{DoxyReturn}{Returns}
+An integer representing the button\textquotesingle{}s answer number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInput_a64afe40706be8b09168100a7aeee26e2}\label{classInput_a64afe40706be8b09168100a7aeee26e2}} 
+\index{Input@{Input}!getID@{getID}}
+\index{getID@{getID}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getID()}{getID()}}
+{\footnotesize\ttfamily int Input\+::get\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to retrieve the ID of the input object. 
+
+This function returns the id of the input.
+
+\begin{DoxyReturn}{Returns}
+An integer representing the input\textquotesingle{}s ID. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInput_a9e3c4d6679fd21769710956bd86de9aa}\label{classInput_a9e3c4d6679fd21769710956bd86de9aa}} 
+\index{Input@{Input}!getState@{getState}}
+\index{getState@{getState}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{getState()}{getState()}}
+{\footnotesize\ttfamily bool Input\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to determine if the input object is on or not. 
+
+This function gets the most recent state of the input and returns true if it is active.
+
+\begin{DoxyReturn}{Returns}
+Whether or not the input object is on. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classInput_a02956c59fae64c7b95be019c0bb01fec}\label{classInput_a02956c59fae64c7b95be019c0bb01fec}} 
+\index{Input@{Input}!updatePlayer@{updatePlayer}}
+\index{updatePlayer@{updatePlayer}!Input@{Input}}
+\doxysubsubsection{\texorpdfstring{updatePlayer()}{updatePlayer()}}
+{\footnotesize\ttfamily void Input\+::update\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to tell the player object if input has been received. 
+
+This function notifies the player if the input object is currently in an on state. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Input.\+h\item 
+Input.\+cpp\end{DoxyCompactItemize}
